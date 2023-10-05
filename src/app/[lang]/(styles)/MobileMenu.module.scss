@@ -1,0 +1,43 @@
+@import 'variables';
+
+.mobileMenuWrapper {
+  font-family: var(--font-ordinaReg);
+  background-color: $basics-dark-color;
+  background: url('/media/pictures/backgroundNew.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 64px;
+  left: 0;
+  z-index: 1001;
+  //
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  //
+  &_mapWrapper {
+    margin-top: 48px;
+    @media screen and (min-width: 768px) {
+      margin-top: 56px;
+    }
+  }
+}
+.link_mob {
+  font-family: var(--font-ordinaReg);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: $basics-grey-color;
+  text-transform: uppercase;
+  text-decoration: none;
+  &:not(:last-child) {
+    margin-right: 32px;
+  }
+  &_wrapper {
+    display: flex;
+    justify-content: center;
+  }
+}

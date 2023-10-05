@@ -1,0 +1,51 @@
+{
+  "nav": {
+    "shops": "Shops",
+    "restaurants": "Restaurants",
+    "services": "Services",
+    "entertainment": "Entertainment",
+    "announcements": "Announcements",
+    "contacts": "Contacts",
+    "mall_map": "Mall map"
+  },
+  "mainPage": {
+    "hero": {
+      "title": "Affordable luxury",
+      "button": "How to find us"
+    },
+    "about": {
+      "title": "Happy Mall - the largest mall in Moldova",
+      "text": "The shopping center was built in accordance with the highest international quality standards. Here you will find a Fashion Gallery with more than 250 brands, an area with Home, lifestyle & beauty products with all services included - supermarket, hyperpharmacy, pet store, dry cleaner, bank, beauty salon.",
+      "link": "read more"
+    },
+    "new": {
+      "title": "Here you will find",
+      "menu": {
+        "fashion": "The largest fashion gallery",
+        "home": "Home and soul",
+        "beauty": "Beauty and tenderness",
+        "rest": "Rest",
+        "link": "больше брендов"
+      },
+      "subMenu": {
+        "clothes": "Clothes",
+        "babyCloth": "Baby-cloth",
+        "shoes": "Shoes",
+        "babyShoes": "Baby-shoes",
+        "underwear": "Underwear",
+        "sport": "Sport",
+        "bags": "Bags and accessories"
+      }
+    },
+    "slider": {
+      "title": "Center for the whole family",
+      "filters": {
+        "karting": "karting",
+        "trampolines": "trampolines",
+        "gameRooms": "game rooms",
+        "attractions": "attractions"
+      },
+      "text": "The shopping center was built in accordance with the highest international quality standards. Here you will find a Fashion Gallery with more than 250 brands"
+    }
+  }
+}

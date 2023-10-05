@@ -1,0 +1,267 @@
+@import '../variables';
+
+.newSection {
+  font-family: var(--font-ordinaReg);
+  background-color: $basics-dark-color;
+  background: url('/media/pictures/backgroundNew.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $basics-light-color;
+  padding-bottom: 140px;
+  padding-top: 80px;
+  &_title {
+    font-family: var(--font-ordinaReg);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 2;
+    text-transform: uppercase;
+    margin-top: 2px;
+    margin-bottom: 20px;
+  }
+  &_SwiperWrapper {
+    width: 142px;
+    @media screen and (min-width: 768px) {
+      width: 537px;
+    }
+    @media screen and (min-width: 1440px) {
+      width: 1058px;
+    }
+    @media screen and (min-width: 1920px) {
+      width: 1390px;
+    }
+  }
+  &_SwiperImg {
+    width: 164px;
+    height: 213px;
+    @media screen and (min-width: 1440px) {
+      width: 196px;
+      height: 255px;
+    }
+    @media screen and (min-width: 1920px) {
+      width: 260px;
+      height: 338px;
+    }
+  }
+  &_mainWrapper {
+    display: flex;
+  }
+  &_SwiperNextBtn {
+    // position: absolute;
+    // top: 0;
+    // right: 10px;
+    display: block;
+    width: 164px;
+    height: 213px;
+    background-color: $basics-dark-color;
+    border: none;
+    z-index: 1000;
+    transition: scale 1000ms ease;
+    cursor: pointer;
+    @media screen and (min-width: 768px) {
+      width: 164px;
+    }
+    @media screen and (min-width: 1440px) {
+      width: 196px;
+      height: 255px;
+    }
+    @media screen and (min-width: 1920px) {
+      width: 260px;
+      height: 338px;
+    }
+    &:hover {
+      .newSection_SwiperIconNext {
+        transition: scale 1000ms ease, transform 1000ms ease;
+
+        transform: translateX(20x);
+        scale: 1.3;
+      }
+    }
+  }
+
+  &_SwiperIconNext {
+    width: 44px;
+    height: 20px;
+  }
+  &_link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: $accent-GoldenDark-color;
+    margin-bottom: 25.5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-top: 18px;
+    @media screen and (min-width: 768px) {
+      margin-bottom: 42px;
+    }
+    @media screen and (min-width: 1440px) {
+      margin-bottom: 0px;
+      margin-top: 0px;
+    }
+    & img {
+      transition: transform 600ms ease;
+    }
+    &:hover {
+      & img {
+        transform: rotate(90deg);
+      }
+    }
+    & p {
+      margin-left: 12px;
+      font-family: var(--font-ordinaReg);
+      font-size: 14px;
+      line-height: 1.5;
+      font-weight: 500;
+      color: inherit;
+      @media screen and (min-width: 768px) {
+        font-size: 16px;
+      }
+    }
+  }
+  &_titleFirst {
+    font-family: var(--font-ordinaReg);
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    @media screen and (min-width: 768px) {
+      font-size: 40px;
+      line-height: 1.05;
+      margin-bottom: 32px;
+    }
+    @media screen and (min-width: 1920px) {
+      font-size: 52px;
+      line-height: 1.15;
+      margin-bottom: 40px;
+    }
+  }
+  &_line {
+    width: 195px;
+    height: 1px;
+    background-color: $accent-GoldenDark-color;
+    margin-bottom: 24px;
+    @media screen and (min-width: 768px) {
+      margin-bottom: 25.5px;
+    }
+    @media screen and (min-width: 1920px) {
+      margin-bottom: 32px;
+    }
+  }
+  &_menuList {
+    list-style: none;
+  }
+  &_menuItem {
+    &_arrow {
+      margin-left: auto;
+      transition: transform 600ms ease;
+      @media screen and (min-width: 768px) {
+        margin-left: 16px;
+      }
+      @media screen and (min-width: 1920px) {
+        margin-left: 24px;
+      }
+    }
+    &_button {
+      font-family: var(--font-ordinaReg);
+      color: $basics-light-color;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1.2;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      transition: color 500ms ease;
+      &:hover {
+        color: $accent-GoldenDark-color;
+      }
+      @media screen and (min-width: 768px) {
+        font-size: 22px;
+        line-height: 1.3;
+      }
+      @media screen and (min-width: 1920px) {
+        font-size: 32px;
+        line-height: 1.15;
+      }
+    }
+    &_wrapper {
+      display: flex;
+      align-items: center;
+      margin-bottom: 13px;
+      @media screen and (min-width: 768px) {
+        margin-bottom: 20px;
+      }
+      @media screen and (min-width: 1920px) {
+        margin-bottom: 32px;
+      }
+    }
+  }
+  &_icon {
+    height: 8px;
+    width: 8px;
+    transform: rotate(45deg);
+    background-color: $basics-light-color;
+    margin-right: 18px;
+  }
+}
+
+.NavList {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  &_item {
+    margin-bottom: 4px;
+    &:not(:last-child) {
+      margin-right: 4px;
+    }
+    &:nth-last-child(-n + 1) {
+      margin-bottom: 0px;
+    }
+  }
+  &_button {
+    color: $basics-light-color;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.1;
+    background-color: transparent;
+    border: none;
+    padding: 7px 16px 10px 16px;
+    border: 1px solid #494843;
+    border-radius: 49px;
+    cursor: pointer;
+    transition: border 600ms ease;
+    &:hover {
+      border: 1.5px solid $accent-GoldenDark-color;
+    }
+  }
+}
+.wrapper {
+  margin-left: 30px;
+}
+.box {
+  @media screen and (min-width: 1440px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 38px;
+  }
+  @media screen and (min-width: 1920px) {
+    margin-bottom: 46px;
+  }
+}
+.newSection_shopLink_wrapper {
+  overflow: hidden;
+}
+.newSection_SwiperImg {
+  transition: scale 600ms ease;
+}
+.newSection_shopLink {
+  color: inherit;
+  list-style: none;
+  text-decoration: none;
+  &:hover {
+    .newSection_SwiperImg {
+      scale: 0.9;
+    }
+  }
+}

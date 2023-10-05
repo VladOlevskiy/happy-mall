@@ -1,0 +1,194 @@
+@import '../variables';
+
+.sectionAbout {
+  background-color: $basics-dark-color;
+  padding-top: 80px;
+  &_line {
+    width: 195px;
+    height: 1px;
+    background-color: $accent-GoldenDark-color;
+    margin-bottom: 16px;
+    @media screen and (min-width: 768px) {
+      margin-bottom: 26px;
+    }
+    @media screen and (min-width: 1920px) {
+      margin-bottom: 32px;
+    }
+  }
+}
+
+.sectionAbout_video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  @media screen and (min-width: 1440px) {
+    min-width: 636px;
+    height: 100%;
+  }
+  @media screen and (min-width: 1920px) {
+    min-width: 739px;
+    height: 100%;
+  }
+}
+
+.sectionAbout_wrapperVideo {
+  position: relative;
+  @media screen and (min-width: 1440px) {
+    margin-right: 78px;
+  }
+  @media screen and (min-width: 1920px) {
+    margin-right: 157px;
+  }
+}
+
+.icon {
+  width: 56px;
+  height: 56px;
+
+  @media screen and (min-width: 1440px) {
+    width: 72px;
+    height: 72px;
+  }
+}
+.circle1,
+.icon {
+  transition: all 300ms ease;
+  stroke: $basics-light-color;
+}
+.button {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  &:hover {
+    .circle1 {
+      stroke: $accent-GoldenDark-color;
+    }
+    .icon {
+      stroke: $accent-GoldenDark-color;
+    }
+  }
+}
+
+.sectionAbout_title {
+  font-family: var(--font-ordinaReg);
+  font-size: 26px;
+  line-height: 1.1;
+  font-weight: 500;
+  color: $basics-light-color;
+  margin-bottom: 24px;
+  @media screen and (min-width: 768px) {
+    font-size: 45px;
+    margin-bottom: 32px;
+  }
+  @media screen and (min-width: 1440px) {
+    font-size: 40px;
+    line-height: 1.05;
+  }
+  @media screen and (min-width: 1920px) {
+    font-size: 52px;
+    line-height: 1.15;
+    margin-bottom: 40px;
+  }
+}
+.sectionAbout_text {
+  font-family: var(--font-ordinaReg);
+  font-size: 16px;
+  line-height: 1.3;
+  font-weight: 400;
+  color: $basics-light-color;
+  margin-bottom: 29.5px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 42px;
+  }
+  @media screen and (min-width: 1920px) {
+    margin-bottom: 50px;
+  }
+}
+.sectionAbout_link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: $accent-GoldenDark-color;
+  margin-bottom: 41.5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0px;
+  }
+  @media screen and (min-width: 1440px) {
+    margin-bottom: 44px;
+  }
+  & img {
+    transition: transform 600ms ease;
+  }
+  &:hover {
+    & img {
+      transform: rotate(90deg);
+    }
+  }
+  & p {
+    margin-left: 12px;
+    font-family: var(--font-ordinaReg);
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 500;
+    color: inherit;
+    @media screen and (min-width: 768px) {
+      font-size: 16px;
+    }
+  }
+}
+.sectionAbout_img {
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: block;
+    max-width: 224px;
+    height: 100%;
+  }
+  @media screen and (min-width: 768px) {
+    display: block;
+    max-width: 197px;
+    height: 100%;
+  }
+  @media screen and (min-width: 1920px) {
+    max-width: 329px;
+  }
+}
+.sectionAbout_SecondaryWrapper {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    margin-bottom: 48px;
+  }
+  @media screen and (min-width: 1440px) {
+    display: block;
+    margin-bottom: 0px;
+  }
+}
+.sectionAbout_textWrapper {
+  @media screen and (min-width: 768px) {
+    margin-right: 77px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  @media screen and (min-width: 1440px) {
+    display: block;
+  }
+}
+.sectionAbout_commonWrapper {
+  @media screen and (min-width: 1440px) {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+
+.sectionAbout_ImgWrapper {
+  @media screen and (min-width: 1440px) {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
