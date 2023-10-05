@@ -2,9 +2,6 @@
 const path = require('path');
 
 const nextConfig = {
-  experimental: {
-    forceSwcTransforms: true,
-  },
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
   },
