@@ -12,7 +12,7 @@ export const Hero = ({ dict }) => {
   return (
     <section className={styles.hero}>
       <Swiper
-        modules={[Pagination, Autoplay]}
+        modules={[Pagination]}
         pagination={{
           bulletClass: `${styles.aaaa}`,
           bulletActiveClass: `${styles.bbbb}`,
@@ -27,19 +27,40 @@ export const Hero = ({ dict }) => {
         slidesPerView={1}
       >
         <SwiperSlide className={styles.hero_slide}>
-          <div className={styles.hero_backgroundImg}></div>
+          {/* <div className={styles.hero_backgroundImg}></div> */}
+          <img
+            src="/media/pictures/hero-picture.jpg"
+            alt="hall of mall"
+            className={styles.Img}
+          />
         </SwiperSlide>
         <SwiperSlide className={styles.hero_slide}>
-          <div className={styles.hero_backgroundImg}></div>
+          <img
+            src="/media/pictures/hero-picture.jpg"
+            alt="hall of mall"
+            className={styles.Img}
+          />
         </SwiperSlide>
         <SwiperSlide className={styles.hero_slide}>
-          <div className={styles.hero_backgroundImg}></div>
+          <img
+            src="/media/pictures/hero-picture.jpg"
+            alt="hall of mall"
+            className={styles.Img}
+          />
         </SwiperSlide>
         <SwiperSlide className={styles.hero_slide}>
-          <div className={styles.hero_backgroundImg}></div>
+          <img
+            src="/media/pictures/hero-picture.jpg"
+            alt="hall of mall"
+            className={styles.Img}
+          />
         </SwiperSlide>
         <SwiperSlide className={styles.hero_slide}>
-          <div className={styles.hero_backgroundImg}></div>
+          <img
+            src="/media/pictures/hero-picture.jpg"
+            alt="hall of mall"
+            className={styles.Img}
+          />
         </SwiperSlide>
       </Swiper>
       <div className={styles.hero_wrapper}>

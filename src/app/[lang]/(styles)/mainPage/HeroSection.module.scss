@@ -33,15 +33,19 @@
     z-index: 2;
   }
   &_slide {
-    max-height: 700px;
+    // max-height: 700px;
+    height: 700px;
     @media screen and (min-width: 768px) {
-      max-height: 950px;
+      // max-height: 950px;
+      height: 950px;
     }
     @media screen and (min-width: 1440px) {
-      max-height: 750px;
+      // max-height: 750px;
+      height: 750px;
     }
     @media screen and (min-width: 1920px) {
-      max-height: 950px;
+      // max-height: 950px;
+      height: 950px;
     }
   }
 }
@@ -87,24 +91,31 @@ div:has(> .aaaa) {
   }
 }
 
-.hero_backgroundImg {
-  background-image: url(/media/pictures/hero-picture.jpg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  overflow: hidden;
-  display: flex;
-  -webkit-box-align: center;
-  align-items: center;
+// .hero_backgroundImg {
+//   background-image: url(/media/pictures/hero-picture.jpg);
+//   background-position: center center;
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   overflow: hidden;
+//   display: flex;
+//   -webkit-box-align: center;
+//   align-items: center;
+//   width: 100%;
+//   height: 700px;
+//   @media screen and (min-width: 768px) {
+//     height: 950px;
+//   }
+//   @media screen and (min-width: 1440px) {
+//     height: 750px;
+//   }
+//   @media screen and (min-width: 1920px) {
+//     height: 950px;
+//   }
+// }
+
+.Img {
   width: 100%;
-  height: 700px;
-  @media screen and (min-width: 768px) {
-    height: 950px;
-  }
-  @media screen and (min-width: 1440px) {
-    height: 750px;
-  }
-  @media screen and (min-width: 1920px) {
-    height: 950px;
-  }
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
 }
