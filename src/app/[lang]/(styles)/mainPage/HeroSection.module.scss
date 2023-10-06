@@ -64,6 +64,9 @@
   transform: rotate(45deg);
   cursor: pointer;
   padding: 8px;
+  &:last-child {
+    margin-right: 0px;
+  }
   @media screen and (min-width: 768px) {
     height: 12px;
     width: 12px;
