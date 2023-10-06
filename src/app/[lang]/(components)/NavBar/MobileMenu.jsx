@@ -17,8 +17,9 @@ const MobileMenu = ({ dict, lang }) => {
               alt="icon"
               className={styles.link_img}
             />
-            style={{ display: 'inline' }}
-            <p className={styles.link_text}>{dict.nav.mall_map}</p>
+            <p style={{ display: 'inline' }} className={styles.link_text}>
+              {dict.nav.mall_map}
+            </p>
           </Link>
         </div>
       </div>
