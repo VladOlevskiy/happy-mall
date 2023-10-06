@@ -18,8 +18,14 @@
   flex-direction: column;
   justify-content: space-evenly;
   //
+  @media screen and (max-height: 571px) {
+    justify-content: flex-start;
+  }
   &_mapWrapper {
     margin-top: 48px;
+    @media screen and (max-height: 422px) {
+      margin-top: 0px;
+    }
     @media screen and (min-width: 768px) {
       margin-top: 56px;
     }
