@@ -12,7 +12,7 @@ export const Hero = ({ dict }) => {
   return (
     <section className={styles.hero}>
       <Swiper
-        modules={[Pagination]}
+        modules={[Pagination, Autoplay]}
         pagination={{
           bulletClass: `${styles.aaaa}`,
           bulletActiveClass: `${styles.bbbb}`,
