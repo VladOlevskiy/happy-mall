@@ -3,6 +3,8 @@ import Link from 'next/link';
 import styles from '../../../(styles)/mainPage/NewSection.module.scss';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
+import { motion } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 
 const NewList = ({ dic, lang }) => {
   const swiperRef = useRef();
@@ -113,1089 +115,1180 @@ const NewList = ({ dic, lang }) => {
         </Link>
       </div>
       {filter === 'clothes' && (
-        <div className={styles.newSection_mainWrapper}>
-          <div className={styles.newSection_SwiperWrapper}>
-            <Swiper
-              onInit={ev => {
-                set_my_swiper(ev);
-              }}
-              ref={swiperRef}
-              modules={[]}
-              scrollbar={{ draggable: true }}
-              spaceBetween={0}
-              slidesPerView={3}
-              loop="true"
-              breakpoints={{
-                1920: {
-                  spaceBetween: 0,
-                  slidesPerView: 5,
-                },
-                1440: {
-                  spaceBetween: 0,
-                  slidesPerView: 5,
-                },
-                768: {
-                  spaceBetween: 0,
-                  slidesPerView: 3,
-                },
-                300: {
-                  spaceBetween: 0,
-                  slidesPerView: 1,
-                },
-              }}
-            >
-              <SwiperSlide>
-                <Link
-                  href={`/${lang}/shops`}
-                  className={styles.newSection_shopLink}
-                >
-                  <div className={styles.newSection_shopLink_wrapper}>
-                    <img
-                      src="/media/pictures/brand-jil-sander.jpg"
-                      className={styles.newSection_SwiperImg}
-                      alt="women model"
-                    />
-                  </div>
-                  <h3 className={styles.newSection_title}>jil sander</h3>
-                </Link>
-              </SwiperSlide>
-              <SwiperSlide>
-                <Link
-                  href={`/${lang}/shops`}
-                  className={styles.newSection_shopLink}
-                >
-                  <div className={styles.newSection_shopLink_wrapper}>
-                    <img
-                      src="/media/pictures/brand-zara.jpg"
-                      className={styles.newSection_SwiperImg}
-                      alt="women model"
-                    />
-                  </div>
-                  <h3 className={styles.newSection_title}>zara</h3>
-                </Link>
-              </SwiperSlide>
-              <SwiperSlide>
-                <Link
-                  href={`/${lang}/shops`}
-                  className={styles.newSection_shopLink}
-                >
-                  <div className={styles.newSection_shopLink_wrapper}>
-                    <img
-                      src="/media/pictures/brand-karl-lagerfeld.jpg"
-                      className={styles.newSection_SwiperImg}
-                      alt="women model"
-                    />
-                  </div>
-                  <h3 className={styles.newSection_title}>karl lagerfeld</h3>
-                </Link>
-              </SwiperSlide>
-              <SwiperSlide>
-                <Link
-                  href={`/${lang}/shops`}
-                  className={styles.newSection_shopLink}
-                >
-                  <div className={styles.newSection_shopLink_wrapper}>
-                    <img
-                      src="/media/pictures/brand-jil-sander.jpg"
-                      className={styles.newSection_SwiperImg}
-                      alt="women model"
-                    />
-                  </div>
-                  <h3 className={styles.newSection_title}>zara</h3>
-                </Link>
-              </SwiperSlide>
-              <SwiperSlide>
-                <Link
-                  href={`/${lang}/shops`}
-                  className={styles.newSection_shopLink}
-                >
-                  <div className={styles.newSection_shopLink_wrapper}>
-                    <img
-                      src="/media/pictures/brand-zara.jpg"
-                      className={styles.newSection_SwiperImg}
-                      alt="women model"
-                    />
-                  </div>
-                  <h3 className={styles.newSection_title}>jil sander</h3>
-                </Link>
-              </SwiperSlide>
-              <SwiperSlide>
-                <Link
-                  href={`/${lang}/shops`}
-                  className={styles.newSection_shopLink}
-                >
-                  <div className={styles.newSection_shopLink_wrapper}>
-                    <img
-                      src="/media/pictures/brand-karl-lagerfeld.jpg"
-                      className={styles.newSection_SwiperImg}
-                      alt="women model"
-                    />
-                  </div>
-                  <h3 className={styles.newSection_title}>zara</h3>
-                </Link>
-              </SwiperSlide>
-              <SwiperSlide>
-                <Link
-                  href={`/${lang}/shops`}
-                  className={styles.newSection_shopLink}
-                >
-                  <div className={styles.newSection_shopLink_wrapper}>
-                    <img
-                      src="/media/pictures/brand-jil-sander.jpg"
-                      className={styles.newSection_SwiperImg}
-                      alt="women model"
-                    />
-                  </div>
-                  <h3 className={styles.newSection_title}>karl lagerfeld</h3>
-                </Link>
-              </SwiperSlide>
-            </Swiper>
-          </div>
-          <button
-            onClick={changeImg}
-            className={styles.newSection_SwiperNextBtn}
+        <AnimatePresence>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              ease: 'linear',
+              duration: 0.4,
+            }}
+            exit={{ opacity: 0 }}
+            className={styles.newSection_mainWrapper}
           >
-            <img
-              className={styles.newSection_SwiperIconNext}
-              src="/media/icons/arrow-right.png"
-              alt="arrow"
-              width={24}
-              height={24}
-            />
-          </button>
-        </div>
+            <div className={styles.newSection_SwiperWrapper}>
+              <Swiper
+                onInit={ev => {
+                  set_my_swiper(ev);
+                }}
+                ref={swiperRef}
+                modules={[]}
+                scrollbar={{ draggable: true }}
+                spaceBetween={0}
+                slidesPerView={3}
+                loop="true"
+                breakpoints={{
+                  1920: {
+                    spaceBetween: 0,
+                    slidesPerView: 5,
+                  },
+                  1440: {
+                    spaceBetween: 0,
+                    slidesPerView: 5,
+                  },
+                  768: {
+                    spaceBetween: 0,
+                    slidesPerView: 3,
+                  },
+                  300: {
+                    spaceBetween: 0,
+                    slidesPerView: 1,
+                  },
+                }}
+              >
+                <SwiperSlide>
+                  <Link
+                    href={`/${lang}/shops`}
+                    className={styles.newSection_shopLink}
+                  >
+                    <div className={styles.newSection_shopLink_wrapper}>
+                      <img
+                        src="/media/pictures/brand-jil-sander.jpg"
+                        className={styles.newSection_SwiperImg}
+                        alt="women model"
+                      />
+                    </div>
+                    <h3 className={styles.newSection_title}>jil sander</h3>
+                  </Link>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Link
+                    href={`/${lang}/shops`}
+                    className={styles.newSection_shopLink}
+                  >
+                    <div className={styles.newSection_shopLink_wrapper}>
+                      <img
+                        src="/media/pictures/brand-zara.jpg"
+                        className={styles.newSection_SwiperImg}
+                        alt="women model"
+                      />
+                    </div>
+                    <h3 className={styles.newSection_title}>zara</h3>
+                  </Link>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Link
+                    href={`/${lang}/shops`}
+                    className={styles.newSection_shopLink}
+                  >
+                    <div className={styles.newSection_shopLink_wrapper}>
+                      <img
+                        src="/media/pictures/brand-karl-lagerfeld.jpg"
+                        className={styles.newSection_SwiperImg}
+                        alt="women model"
+                      />
+                    </div>
+                    <h3 className={styles.newSection_title}>karl lagerfeld</h3>
+                  </Link>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Link
+                    href={`/${lang}/shops`}
+                    className={styles.newSection_shopLink}
+                  >
+                    <div className={styles.newSection_shopLink_wrapper}>
+                      <img
+                        src="/media/pictures/brand-jil-sander.jpg"
+                        className={styles.newSection_SwiperImg}
+                        alt="women model"
+                      />
+                    </div>
+                    <h3 className={styles.newSection_title}>zara</h3>
+                  </Link>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Link
+                    href={`/${lang}/shops`}
+                    className={styles.newSection_shopLink}
+                  >
+                    <div className={styles.newSection_shopLink_wrapper}>
+                      <img
+                        src="/media/pictures/brand-zara.jpg"
+                        className={styles.newSection_SwiperImg}
+                        alt="women model"
+                      />
+                    </div>
+                    <h3 className={styles.newSection_title}>jil sander</h3>
+                  </Link>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Link
+                    href={`/${lang}/shops`}
+                    className={styles.newSection_shopLink}
+                  >
+                    <div className={styles.newSection_shopLink_wrapper}>
+                      <img
+                        src="/media/pictures/brand-karl-lagerfeld.jpg"
+                        className={styles.newSection_SwiperImg}
+                        alt="women model"
+                      />
+                    </div>
+                    <h3 className={styles.newSection_title}>zara</h3>
+                  </Link>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Link
+                    href={`/${lang}/shops`}
+                    className={styles.newSection_shopLink}
+                  >
+                    <div className={styles.newSection_shopLink_wrapper}>
+                      <img
+                        src="/media/pictures/brand-jil-sander.jpg"
+                        className={styles.newSection_SwiperImg}
+                        alt="women model"
+                      />
+                    </div>
+                    <h3 className={styles.newSection_title}>karl lagerfeld</h3>
+                  </Link>
+                </SwiperSlide>
+              </Swiper>
+            </div>
+            <button
+              onClick={changeImg}
+              className={styles.newSection_SwiperNextBtn}
+            >
+              <img
+                className={styles.newSection_SwiperIconNext}
+                src="/media/icons/arrow-right.png"
+                alt="arrow"
+                width={24}
+                height={24}
+              />
+            </button>
+          </motion.div>
+        </AnimatePresence>
       )}
       {filter === 'babyCloth' && (
-        <div className={styles.newSection_mainWrapper}>
-          <div className={styles.newSection_SwiperWrapper}>
-            <Swiper
-              onInit={ev => {
-                set_my_swiper(ev);
-              }}
-              ref={swiperRef}
-              modules={[]}
-              scrollbar={{ draggable: true }}
-              spaceBetween={0}
-              slidesPerView={3}
-              loop="true"
-              breakpoints={{
-                1920: {
-                  spaceBetween: 0,
-                  slidesPerView: 5,
-                },
-                1440: {
-                  spaceBetween: 0,
-                  slidesPerView: 5,
-                },
-                768: {
-                  spaceBetween: 0,
-                  slidesPerView: 3,
-                },
-                300: {
-                  spaceBetween: 0,
-                  slidesPerView: 1,
-                },
-              }}
-            >
-              <SwiperSlide>
-                <Link
-                  href={`/${lang}/shops`}
-                  className={styles.newSection_shopLink}
-                >
-                  <div className={styles.newSection_shopLink_wrapper}>
-                    <img
-                      src="/media/pictures/brand-jil-sander.jpg"
-                      className={styles.newSection_SwiperImg}
-                      alt="women model"
-                    />
-                  </div>
-                  <h3 className={styles.newSection_title}>kid brand 1</h3>
-                </Link>
-              </SwiperSlide>
-              <SwiperSlide>
-                <Link
-                  href={`/${lang}/shops`}
-                  className={styles.newSection_shopLink}
-                >
-                  <div className={styles.newSection_shopLink_wrapper}>
-                    <img
-                      src="/media/pictures/brand-zara.jpg"
-                      className={styles.newSection_SwiperImg}
-                      alt="women model"
-                    />
-                  </div>
-                  <h3 className={styles.newSection_title}>kid brand 2</h3>
-                </Link>
-              </SwiperSlide>
-              <SwiperSlide>
-                <Link
-                  href={`/${lang}/shops`}
-                  className={styles.newSection_shopLink}
-                >
-                  <div className={styles.newSection_shopLink_wrapper}>
-                    <img
-                      src="/media/pictures/brand-karl-lagerfeld.jpg"
-                      className={styles.newSection_SwiperImg}
-                      alt="women model"
-                    />
-                  </div>
-                  <h3 className={styles.newSection_title}>kid brand 3</h3>
-                </Link>
-              </SwiperSlide>
-              <SwiperSlide>
-                <Link
-                  href={`/${lang}/shops`}
-                  className={styles.newSection_shopLink}
-                >
-                  <div className={styles.newSection_shopLink_wrapper}>
-                    <img
-                      src="/media/pictures/brand-jil-sander.jpg"
-                      className={styles.newSection_SwiperImg}
-                      alt="women model"
-                    />
-                  </div>
-                  <h3 className={styles.newSection_title}>kid brand 4</h3>
-                </Link>
-              </SwiperSlide>
-              <SwiperSlide>
-                <Link
-                  href={`/${lang}/shops`}
-                  className={styles.newSection_shopLink}
-                >
-                  <div className={styles.newSection_shopLink_wrapper}>
-                    <img
-                      src="/media/pictures/brand-zara.jpg"
-                      className={styles.newSection_SwiperImg}
-                      alt="women model"
-                    />
-                  </div>
-                  <h3 className={styles.newSection_title}>kid brand 5</h3>
-                </Link>
-              </SwiperSlide>
-              <SwiperSlide>
-                <Link
-                  href={`/${lang}/shops`}
-                  className={styles.newSection_shopLink}
-                >
-                  <div className={styles.newSection_shopLink_wrapper}>
-                    <img
-                      src="/media/pictures/brand-karl-lagerfeld.jpg"
-                      className={styles.newSection_SwiperImg}
-                      alt="women model"
-                    />
-                  </div>
-                  <h3 className={styles.newSection_title}>kid brand 6</h3>
-                </Link>
-              </SwiperSlide>
-              <SwiperSlide>
-                <Link
-                  href={`/${lang}/shops`}
-                  className={styles.newSection_shopLink}
-                >
-                  <div className={styles.newSection_shopLink_wrapper}>
-                    <img
-                      src="/media/pictures/brand-jil-sander.jpg"
-                      className={styles.newSection_SwiperImg}
-                      alt="women model"
-                    />
-                  </div>
-                  <h3 className={styles.newSection_title}>kid brand 6</h3>
-                </Link>
-              </SwiperSlide>
-            </Swiper>
-          </div>
-          <button
-            onClick={changeImg}
-            className={styles.newSection_SwiperNextBtn}
+        <AnimatePresence>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              ease: 'linear',
+              duration: 0.4,
+            }}
+            exit={{ opacity: 0 }}
+            className={styles.newSection_mainWrapper}
           >
-            <img
-              className={styles.newSection_SwiperIconNext}
-              src="/media/icons/arrow-right.png"
-              alt="arrow"
-              width={24}
-              height={24}
-            />
-          </button>
-        </div>
+            <div className={styles.newSection_SwiperWrapper}>
+              <Swiper
+                onInit={ev => {
+                  set_my_swiper(ev);
+                }}
+                ref={swiperRef}
+                modules={[]}
+                scrollbar={{ draggable: true }}
+                spaceBetween={0}
+                slidesPerView={3}
+                loop="true"
+                breakpoints={{
+                  1920: {
+                    spaceBetween: 0,
+                    slidesPerView: 5,
+                  },
+                  1440: {
+                    spaceBetween: 0,
+                    slidesPerView: 5,
+                  },
+                  768: {
+                    spaceBetween: 0,
+                    slidesPerView: 3,
+                  },
+                  300: {
+                    spaceBetween: 0,
+                    slidesPerView: 1,
+                  },
+                }}
+              >
+                <SwiperSlide>
+                  <Link
+                    href={`/${lang}/shops`}
+                    className={styles.newSection_shopLink}
+                  >
+                    <div className={styles.newSection_shopLink_wrapper}>
+                      <img
+                        src="/media/pictures/brand-jil-sander.jpg"
+                        className={styles.newSection_SwiperImg}
+                        alt="women model"
+                      />
+                    </div>
+                    <h3 className={styles.newSection_title}>kid brand 1</h3>
+                  </Link>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Link
+                    href={`/${lang}/shops`}
+                    className={styles.newSection_shopLink}
+                  >
+                    <div className={styles.newSection_shopLink_wrapper}>
+                      <img
+                        src="/media/pictures/brand-zara.jpg"
+                        className={styles.newSection_SwiperImg}
+                        alt="women model"
+                      />
+                    </div>
+                    <h3 className={styles.newSection_title}>kid brand 2</h3>
+                  </Link>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Link
+                    href={`/${lang}/shops`}
+                    className={styles.newSection_shopLink}
+                  >
+                    <div className={styles.newSection_shopLink_wrapper}>
+                      <img
+                        src="/media/pictures/brand-karl-lagerfeld.jpg"
+                        className={styles.newSection_SwiperImg}
+                        alt="women model"
+                      />
+                    </div>
+                    <h3 className={styles.newSection_title}>kid brand 3</h3>
+                  </Link>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Link
+                    href={`/${lang}/shops`}
+                    className={styles.newSection_shopLink}
+                  >
+                    <div className={styles.newSection_shopLink_wrapper}>
+                      <img
+                        src="/media/pictures/brand-jil-sander.jpg"
+                        className={styles.newSection_SwiperImg}
+                        alt="women model"
+                      />
+                    </div>
+                    <h3 className={styles.newSection_title}>kid brand 4</h3>
+                  </Link>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Link
+                    href={`/${lang}/shops`}
+                    className={styles.newSection_shopLink}
+                  >
+                    <div className={styles.newSection_shopLink_wrapper}>
+                      <img
+                        src="/media/pictures/brand-zara.jpg"
+                        className={styles.newSection_SwiperImg}
+                        alt="women model"
+                      />
+                    </div>
+                    <h3 className={styles.newSection_title}>kid brand 5</h3>
+                  </Link>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Link
+                    href={`/${lang}/shops`}
+                    className={styles.newSection_shopLink}
+                  >
+                    <div className={styles.newSection_shopLink_wrapper}>
+                      <img
+                        src="/media/pictures/brand-karl-lagerfeld.jpg"
+                        className={styles.newSection_SwiperImg}
+                        alt="women model"
+                      />
+                    </div>
+                    <h3 className={styles.newSection_title}>kid brand 6</h3>
+                  </Link>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Link
+                    href={`/${lang}/shops`}
+                    className={styles.newSection_shopLink}
+                  >
+                    <div className={styles.newSection_shopLink_wrapper}>
+                      <img
+                        src="/media/pictures/brand-jil-sander.jpg"
+                        className={styles.newSection_SwiperImg}
+                        alt="women model"
+                      />
+                    </div>
+                    <h3 className={styles.newSection_title}>kid brand 6</h3>
+                  </Link>
+                </SwiperSlide>
+              </Swiper>
+            </div>
+            <button
+              onClick={changeImg}
+              className={styles.newSection_SwiperNextBtn}
+            >
+              <img
+                className={styles.newSection_SwiperIconNext}
+                src="/media/icons/arrow-right.png"
+                alt="arrow"
+                width={24}
+                height={24}
+              />
+            </button>
+          </motion.div>
+        </AnimatePresence>
       )}
       {filter === 'shoes' && (
-        <div className={styles.newSection_mainWrapper}>
-          <div className={styles.newSection_SwiperWrapper}>
-            <Swiper
-              onInit={ev => {
-                set_my_swiper(ev);
-              }}
-              ref={swiperRef}
-              modules={[]}
-              scrollbar={{ draggable: true }}
-              spaceBetween={0}
-              slidesPerView={3}
-              loop="true"
-              breakpoints={{
-                1920: {
-                  spaceBetween: 0,
-                  slidesPerView: 5,
-                },
-                1440: {
-                  spaceBetween: 0,
-                  slidesPerView: 5,
-                },
-                768: {
-                  spaceBetween: 0,
-                  slidesPerView: 3,
-                },
-                300: {
-                  spaceBetween: 0,
-                  slidesPerView: 1,
-                },
-              }}
-            >
-              <SwiperSlide>
-                <Link
-                  href={`/${lang}/shops`}
-                  className={styles.newSection_shopLink}
-                >
-                  <div className={styles.newSection_shopLink_wrapper}>
-                    <img
-                      src="/media/pictures/brand-jil-sander.jpg"
-                      className={styles.newSection_SwiperImg}
-                      alt="women model"
-                    />
-                  </div>
-                  <h3 className={styles.newSection_title}>shoes brand 1</h3>
-                </Link>
-              </SwiperSlide>
-              <SwiperSlide>
-                <Link
-                  href={`/${lang}/shops`}
-                  className={styles.newSection_shopLink}
-                >
-                  <div className={styles.newSection_shopLink_wrapper}>
-                    <img
-                      src="/media/pictures/brand-zara.jpg"
-                      className={styles.newSection_SwiperImg}
-                      alt="women model"
-                    />
-                  </div>
-                  <h3 className={styles.newSection_title}>shoes brand 2</h3>
-                </Link>
-              </SwiperSlide>
-              <SwiperSlide>
-                <Link
-                  href={`/${lang}/shops`}
-                  className={styles.newSection_shopLink}
-                >
-                  <div className={styles.newSection_shopLink_wrapper}>
-                    <img
-                      src="/media/pictures/brand-karl-lagerfeld.jpg"
-                      className={styles.newSection_SwiperImg}
-                      alt="women model"
-                    />
-                  </div>
-                  <h3 className={styles.newSection_title}>shoes brand 3</h3>
-                </Link>
-              </SwiperSlide>
-              <SwiperSlide>
-                <Link
-                  href={`/${lang}/shops`}
-                  className={styles.newSection_shopLink}
-                >
-                  <div className={styles.newSection_shopLink_wrapper}>
-                    <img
-                      src="/media/pictures/brand-jil-sander.jpg"
-                      className={styles.newSection_SwiperImg}
-                      alt="women model"
-                    />
-                  </div>
-                  <h3 className={styles.newSection_title}>shoes brand 4</h3>
-                </Link>
-              </SwiperSlide>
-              <SwiperSlide>
-                <Link
-                  href={`/${lang}/shops`}
-                  className={styles.newSection_shopLink}
-                >
-                  <div className={styles.newSection_shopLink_wrapper}>
-                    <img
-                      src="/media/pictures/brand-zara.jpg"
-                      className={styles.newSection_SwiperImg}
-                      alt="women model"
-                    />
-                  </div>
-                  <h3 className={styles.newSection_title}>shoes brand 5</h3>
-                </Link>
-              </SwiperSlide>
-              <SwiperSlide>
-                <Link
-                  href={`/${lang}/shops`}
-                  className={styles.newSection_shopLink}
-                >
-                  <div className={styles.newSection_shopLink_wrapper}>
-                    <img
-                      src="/media/pictures/brand-karl-lagerfeld.jpg"
-                      className={styles.newSection_SwiperImg}
-                      alt="women model"
-                    />
-                  </div>
-                  <h3 className={styles.newSection_title}>shoes brand 6</h3>
-                </Link>
-              </SwiperSlide>
-              <SwiperSlide>
-                <Link
-                  href={`/${lang}/shops`}
-                  className={styles.newSection_shopLink}
-                >
-                  <div className={styles.newSection_shopLink_wrapper}>
-                    <img
-                      src="/media/pictures/brand-jil-sander.jpg"
-                      className={styles.newSection_SwiperImg}
-                      alt="women model"
-                    />
-                  </div>
-                  <h3 className={styles.newSection_title}>shoes brand 7</h3>
-                </Link>
-              </SwiperSlide>
-            </Swiper>
-          </div>
-          <button
-            onClick={changeImg}
-            className={styles.newSection_SwiperNextBtn}
+        <AnimatePresence>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              ease: 'linear',
+              duration: 0.4,
+            }}
+            exit={{ opacity: 0 }}
+            className={styles.newSection_mainWrapper}
           >
-            <img
-              className={styles.newSection_SwiperIconNext}
-              src="/media/icons/arrow-right.png"
-              alt="arrow"
-              width={24}
-              height={24}
-            />
-          </button>
-        </div>
+            <div className={styles.newSection_SwiperWrapper}>
+              <Swiper
+                onInit={ev => {
+                  set_my_swiper(ev);
+                }}
+                ref={swiperRef}
+                modules={[]}
+                scrollbar={{ draggable: true }}
+                spaceBetween={0}
+                slidesPerView={3}
+                loop="true"
+                breakpoints={{
+                  1920: {
+                    spaceBetween: 0,
+                    slidesPerView: 5,
+                  },
+                  1440: {
+                    spaceBetween: 0,
+                    slidesPerView: 5,
+                  },
+                  768: {
+                    spaceBetween: 0,
+                    slidesPerView: 3,
+                  },
+                  300: {
+                    spaceBetween: 0,
+                    slidesPerView: 1,
+                  },
+                }}
+              >
+                <SwiperSlide>
+                  <Link
+                    href={`/${lang}/shops`}
+                    className={styles.newSection_shopLink}
+                  >
+                    <div className={styles.newSection_shopLink_wrapper}>
+                      <img
+                        src="/media/pictures/brand-jil-sander.jpg"
+                        className={styles.newSection_SwiperImg}
+                        alt="women model"
+                      />
+                    </div>
+                    <h3 className={styles.newSection_title}>shoes brand 1</h3>
+                  </Link>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Link
+                    href={`/${lang}/shops`}
+                    className={styles.newSection_shopLink}
+                  >
+                    <div className={styles.newSection_shopLink_wrapper}>
+                      <img
+                        src="/media/pictures/brand-zara.jpg"
+                        className={styles.newSection_SwiperImg}
+                        alt="women model"
+                      />
+                    </div>
+                    <h3 className={styles.newSection_title}>shoes brand 2</h3>
+                  </Link>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Link
+                    href={`/${lang}/shops`}
+                    className={styles.newSection_shopLink}
+                  >
+                    <div className={styles.newSection_shopLink_wrapper}>
+                      <img
+                        src="/media/pictures/brand-karl-lagerfeld.jpg"
+                        className={styles.newSection_SwiperImg}
+                        alt="women model"
+                      />
+                    </div>
+                    <h3 className={styles.newSection_title}>shoes brand 3</h3>
+                  </Link>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Link
+                    href={`/${lang}/shops`}
+                    className={styles.newSection_shopLink}
+                  >
+                    <div className={styles.newSection_shopLink_wrapper}>
+                      <img
+                        src="/media/pictures/brand-jil-sander.jpg"
+                        className={styles.newSection_SwiperImg}
+                        alt="women model"
+                      />
+                    </div>
+                    <h3 className={styles.newSection_title}>shoes brand 4</h3>
+                  </Link>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Link
+                    href={`/${lang}/shops`}
+                    className={styles.newSection_shopLink}
+                  >
+                    <div className={styles.newSection_shopLink_wrapper}>
+                      <img
+                        src="/media/pictures/brand-zara.jpg"
+                        className={styles.newSection_SwiperImg}
+                        alt="women model"
+                      />
+                    </div>
+                    <h3 className={styles.newSection_title}>shoes brand 5</h3>
+                  </Link>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Link
+                    href={`/${lang}/shops`}
+                    className={styles.newSection_shopLink}
+                  >
+                    <div className={styles.newSection_shopLink_wrapper}>
+                      <img
+                        src="/media/pictures/brand-karl-lagerfeld.jpg"
+                        className={styles.newSection_SwiperImg}
+                        alt="women model"
+                      />
+                    </div>
+                    <h3 className={styles.newSection_title}>shoes brand 6</h3>
+                  </Link>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Link
+                    href={`/${lang}/shops`}
+                    className={styles.newSection_shopLink}
+                  >
+                    <div className={styles.newSection_shopLink_wrapper}>
+                      <img
+                        src="/media/pictures/brand-jil-sander.jpg"
+                        className={styles.newSection_SwiperImg}
+                        alt="women model"
+                      />
+                    </div>
+                    <h3 className={styles.newSection_title}>shoes brand 7</h3>
+                  </Link>
+                </SwiperSlide>
+              </Swiper>
+            </div>
+            <button
+              onClick={changeImg}
+              className={styles.newSection_SwiperNextBtn}
+            >
+              <img
+                className={styles.newSection_SwiperIconNext}
+                src="/media/icons/arrow-right.png"
+                alt="arrow"
+                width={24}
+                height={24}
+              />
+            </button>
+          </motion.div>
+        </AnimatePresence>
       )}
       {filter === 'babyShoes' && (
-        <div className={styles.newSection_mainWrapper}>
-          <div className={styles.newSection_SwiperWrapper}>
-            <Swiper
-              onInit={ev => {
-                set_my_swiper(ev);
-              }}
-              ref={swiperRef}
-              modules={[]}
-              scrollbar={{ draggable: true }}
-              spaceBetween={0}
-              slidesPerView={3}
-              loop="true"
-              breakpoints={{
-                1920: {
-                  spaceBetween: 0,
-                  slidesPerView: 5,
-                },
-                1440: {
-                  spaceBetween: 0,
-                  slidesPerView: 5,
-                },
-                768: {
-                  spaceBetween: 0,
-                  slidesPerView: 3,
-                },
-                300: {
-                  spaceBetween: 0,
-                  slidesPerView: 1,
-                },
-              }}
-            >
-              <SwiperSlide>
-                <Link
-                  href={`/${lang}/shops`}
-                  className={styles.newSection_shopLink}
-                >
-                  <div className={styles.newSection_shopLink_wrapper}>
-                    <img
-                      src="/media/pictures/brand-jil-sander.jpg"
-                      className={styles.newSection_SwiperImg}
-                      alt="women model"
-                    />
-                  </div>
-                  <h3 className={styles.newSection_title}>
-                    baby shoes brand 1
-                  </h3>
-                </Link>
-              </SwiperSlide>
-              <SwiperSlide>
-                <Link
-                  href={`/${lang}/shops`}
-                  className={styles.newSection_shopLink}
-                >
-                  <div className={styles.newSection_shopLink_wrapper}>
-                    <img
-                      src="/media/pictures/brand-zara.jpg"
-                      className={styles.newSection_SwiperImg}
-                      alt="women model"
-                    />
-                  </div>
-                  <h3 className={styles.newSection_title}>
-                    baby shoes brand 2
-                  </h3>
-                </Link>
-              </SwiperSlide>
-              <SwiperSlide>
-                <Link
-                  href={`/${lang}/shops`}
-                  className={styles.newSection_shopLink}
-                >
-                  <div className={styles.newSection_shopLink_wrapper}>
-                    <img
-                      src="/media/pictures/brand-karl-lagerfeld.jpg"
-                      className={styles.newSection_SwiperImg}
-                      alt="women model"
-                    />
-                  </div>
-                  <h3 className={styles.newSection_title}>
-                    baby shoes brand 3
-                  </h3>
-                </Link>
-              </SwiperSlide>
-              <SwiperSlide>
-                <Link
-                  href={`/${lang}/shops`}
-                  className={styles.newSection_shopLink}
-                >
-                  <div className={styles.newSection_shopLink_wrapper}>
-                    <img
-                      src="/media/pictures/brand-jil-sander.jpg"
-                      className={styles.newSection_SwiperImg}
-                      alt="women model"
-                    />
-                  </div>
-                  <h3 className={styles.newSection_title}>
-                    baby shoes brand 4
-                  </h3>
-                </Link>
-              </SwiperSlide>
-              <SwiperSlide>
-                <Link
-                  href={`/${lang}/shops`}
-                  className={styles.newSection_shopLink}
-                >
-                  <div className={styles.newSection_shopLink_wrapper}>
-                    <img
-                      src="/media/pictures/brand-zara.jpg"
-                      className={styles.newSection_SwiperImg}
-                      alt="women model"
-                    />
-                  </div>
-                  <h3 className={styles.newSection_title}>
-                    baby shoes brand 5
-                  </h3>
-                </Link>
-              </SwiperSlide>
-              <SwiperSlide>
-                <Link
-                  href={`/${lang}/shops`}
-                  className={styles.newSection_shopLink}
-                >
-                  <div className={styles.newSection_shopLink_wrapper}>
-                    <img
-                      src="/media/pictures/brand-karl-lagerfeld.jpg"
-                      className={styles.newSection_SwiperImg}
-                      alt="women model"
-                    />
-                  </div>
-                  <h3 className={styles.newSection_title}>
-                    baby shoes brand 6
-                  </h3>
-                </Link>
-              </SwiperSlide>
-              <SwiperSlide>
-                <Link
-                  href={`/${lang}/shops`}
-                  className={styles.newSection_shopLink}
-                >
-                  <div className={styles.newSection_shopLink_wrapper}>
-                    <img
-                      src="/media/pictures/brand-jil-sander.jpg"
-                      className={styles.newSection_SwiperImg}
-                      alt="women model"
-                    />
-                  </div>
-                  <h3 className={styles.newSection_title}>
-                    baby shoes brand 7
-                  </h3>
-                </Link>
-              </SwiperSlide>
-            </Swiper>
-          </div>
-          <button
-            onClick={changeImg}
-            className={styles.newSection_SwiperNextBtn}
+        <AnimatePresence>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              ease: 'linear',
+              duration: 0.4,
+            }}
+            exit={{ opacity: 0 }}
+            className={styles.newSection_mainWrapper}
           >
-            <img
-              className={styles.newSection_SwiperIconNext}
-              src="/media/icons/arrow-right.png"
-              alt="arrow"
-              width={24}
-              height={24}
-            />
-          </button>
-        </div>
+            <div className={styles.newSection_SwiperWrapper}>
+              <Swiper
+                onInit={ev => {
+                  set_my_swiper(ev);
+                }}
+                ref={swiperRef}
+                modules={[]}
+                scrollbar={{ draggable: true }}
+                spaceBetween={0}
+                slidesPerView={3}
+                loop="true"
+                breakpoints={{
+                  1920: {
+                    spaceBetween: 0,
+                    slidesPerView: 5,
+                  },
+                  1440: {
+                    spaceBetween: 0,
+                    slidesPerView: 5,
+                  },
+                  768: {
+                    spaceBetween: 0,
+                    slidesPerView: 3,
+                  },
+                  300: {
+                    spaceBetween: 0,
+                    slidesPerView: 1,
+                  },
+                }}
+              >
+                <SwiperSlide>
+                  <Link
+                    href={`/${lang}/shops`}
+                    className={styles.newSection_shopLink}
+                  >
+                    <div className={styles.newSection_shopLink_wrapper}>
+                      <img
+                        src="/media/pictures/brand-jil-sander.jpg"
+                        className={styles.newSection_SwiperImg}
+                        alt="women model"
+                      />
+                    </div>
+                    <h3 className={styles.newSection_title}>
+                      baby shoes brand 1
+                    </h3>
+                  </Link>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Link
+                    href={`/${lang}/shops`}
+                    className={styles.newSection_shopLink}
+                  >
+                    <div className={styles.newSection_shopLink_wrapper}>
+                      <img
+                        src="/media/pictures/brand-zara.jpg"
+                        className={styles.newSection_SwiperImg}
+                        alt="women model"
+                      />
+                    </div>
+                    <h3 className={styles.newSection_title}>
+                      baby shoes brand 2
+                    </h3>
+                  </Link>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Link
+                    href={`/${lang}/shops`}
+                    className={styles.newSection_shopLink}
+                  >
+                    <div className={styles.newSection_shopLink_wrapper}>
+                      <img
+                        src="/media/pictures/brand-karl-lagerfeld.jpg"
+                        className={styles.newSection_SwiperImg}
+                        alt="women model"
+                      />
+                    </div>
+                    <h3 className={styles.newSection_title}>
+                      baby shoes brand 3
+                    </h3>
+                  </Link>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Link
+                    href={`/${lang}/shops`}
+                    className={styles.newSection_shopLink}
+                  >
+                    <div className={styles.newSection_shopLink_wrapper}>
+                      <img
+                        src="/media/pictures/brand-jil-sander.jpg"
+                        className={styles.newSection_SwiperImg}
+                        alt="women model"
+                      />
+                    </div>
+                    <h3 className={styles.newSection_title}>
+                      baby shoes brand 4
+                    </h3>
+                  </Link>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Link
+                    href={`/${lang}/shops`}
+                    className={styles.newSection_shopLink}
+                  >
+                    <div className={styles.newSection_shopLink_wrapper}>
+                      <img
+                        src="/media/pictures/brand-zara.jpg"
+                        className={styles.newSection_SwiperImg}
+                        alt="women model"
+                      />
+                    </div>
+                    <h3 className={styles.newSection_title}>
+                      baby shoes brand 5
+                    </h3>
+                  </Link>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Link
+                    href={`/${lang}/shops`}
+                    className={styles.newSection_shopLink}
+                  >
+                    <div className={styles.newSection_shopLink_wrapper}>
+                      <img
+                        src="/media/pictures/brand-karl-lagerfeld.jpg"
+                        className={styles.newSection_SwiperImg}
+                        alt="women model"
+                      />
+                    </div>
+                    <h3 className={styles.newSection_title}>
+                      baby shoes brand 6
+                    </h3>
+                  </Link>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Link
+                    href={`/${lang}/shops`}
+                    className={styles.newSection_shopLink}
+                  >
+                    <div className={styles.newSection_shopLink_wrapper}>
+                      <img
+                        src="/media/pictures/brand-jil-sander.jpg"
+                        className={styles.newSection_SwiperImg}
+                        alt="women model"
+                      />
+                    </div>
+                    <h3 className={styles.newSection_title}>
+                      baby shoes brand 7
+                    </h3>
+                  </Link>
+                </SwiperSlide>
+              </Swiper>
+            </div>
+            <button
+              onClick={changeImg}
+              className={styles.newSection_SwiperNextBtn}
+            >
+              <img
+                className={styles.newSection_SwiperIconNext}
+                src="/media/icons/arrow-right.png"
+                alt="arrow"
+                width={24}
+                height={24}
+              />
+            </button>
+          </motion.div>
+        </AnimatePresence>
       )}
       {filter === 'underwear' && (
-        <div className={styles.newSection_mainWrapper}>
-          <div className={styles.newSection_SwiperWrapper}>
-            <Swiper
-              onInit={ev => {
-                set_my_swiper(ev);
-              }}
-              ref={swiperRef}
-              modules={[]}
-              scrollbar={{ draggable: true }}
-              spaceBetween={0}
-              slidesPerView={3}
-              loop="true"
-              breakpoints={{
-                1920: {
-                  spaceBetween: 0,
-                  slidesPerView: 5,
-                },
-                1440: {
-                  spaceBetween: 0,
-                  slidesPerView: 5,
-                },
-                768: {
-                  spaceBetween: 0,
-                  slidesPerView: 3,
-                },
-                300: {
-                  spaceBetween: 0,
-                  slidesPerView: 1,
-                },
-              }}
-            >
-              <SwiperSlide>
-                <Link
-                  href={`/${lang}/shops`}
-                  className={styles.newSection_shopLink}
-                >
-                  <div className={styles.newSection_shopLink_wrapper}>
-                    <img
-                      src="/media/pictures/brand-jil-sander.jpg"
-                      className={styles.newSection_SwiperImg}
-                      alt="women model"
-                    />
-                  </div>
-                  <h3 className={styles.newSection_title}>underwear brand 1</h3>
-                </Link>
-              </SwiperSlide>
-              <SwiperSlide>
-                <Link
-                  href={`/${lang}/shops`}
-                  className={styles.newSection_shopLink}
-                >
-                  <div className={styles.newSection_shopLink_wrapper}>
-                    <img
-                      src="/media/pictures/brand-zara.jpg"
-                      className={styles.newSection_SwiperImg}
-                      alt="women model"
-                    />
-                  </div>
-                  <h3 className={styles.newSection_title}>underwear brand 2</h3>
-                </Link>
-              </SwiperSlide>
-              <SwiperSlide>
-                <Link
-                  href={`/${lang}/shops`}
-                  className={styles.newSection_shopLink}
-                >
-                  <div className={styles.newSection_shopLink_wrapper}>
-                    <img
-                      src="/media/pictures/brand-karl-lagerfeld.jpg"
-                      className={styles.newSection_SwiperImg}
-                      alt="women model"
-                    />
-                  </div>
-                  <h3 className={styles.newSection_title}>underwear brand 3</h3>
-                </Link>
-              </SwiperSlide>
-              <SwiperSlide>
-                <Link
-                  href={`/${lang}/shops`}
-                  className={styles.newSection_shopLink}
-                >
-                  <div className={styles.newSection_shopLink_wrapper}>
-                    <img
-                      src="/media/pictures/brand-jil-sander.jpg"
-                      className={styles.newSection_SwiperImg}
-                      alt="women model"
-                    />
-                  </div>
-                  <h3 className={styles.newSection_title}>underwear brand 4</h3>
-                </Link>
-              </SwiperSlide>
-              <SwiperSlide>
-                <Link
-                  href={`/${lang}/shops`}
-                  className={styles.newSection_shopLink}
-                >
-                  <div className={styles.newSection_shopLink_wrapper}>
-                    <img
-                      src="/media/pictures/brand-zara.jpg"
-                      className={styles.newSection_SwiperImg}
-                      alt="women model"
-                    />
-                  </div>
-                  <h3 className={styles.newSection_title}>underwear brand 5</h3>
-                </Link>
-              </SwiperSlide>
-              <SwiperSlide>
-                <Link
-                  href={`/${lang}/shops`}
-                  className={styles.newSection_shopLink}
-                >
-                  <div className={styles.newSection_shopLink_wrapper}>
-                    <img
-                      src="/media/pictures/brand-karl-lagerfeld.jpg"
-                      className={styles.newSection_SwiperImg}
-                      alt="women model"
-                    />
-                  </div>
-                  <h3 className={styles.newSection_title}>underwear brand 6</h3>
-                </Link>
-              </SwiperSlide>
-              <SwiperSlide>
-                <Link
-                  href={`/${lang}/shops`}
-                  className={styles.newSection_shopLink}
-                >
-                  <div className={styles.newSection_shopLink_wrapper}>
-                    <img
-                      src="/media/pictures/brand-jil-sander.jpg"
-                      className={styles.newSection_SwiperImg}
-                      alt="women model"
-                    />
-                  </div>
-                  <h3 className={styles.newSection_title}>underwear brand 7</h3>
-                </Link>
-              </SwiperSlide>
-            </Swiper>
-          </div>
-          <button
-            onClick={changeImg}
-            className={styles.newSection_SwiperNextBtn}
+        <AnimatePresence>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              ease: 'linear',
+              duration: 0.4,
+            }}
+            exit={{ opacity: 0 }}
+            className={styles.newSection_mainWrapper}
           >
-            <img
-              className={styles.newSection_SwiperIconNext}
-              src="/media/icons/arrow-right.png"
-              alt="arrow"
-              width={24}
-              height={24}
-            />
-          </button>
-        </div>
+            <div className={styles.newSection_SwiperWrapper}>
+              <Swiper
+                onInit={ev => {
+                  set_my_swiper(ev);
+                }}
+                ref={swiperRef}
+                modules={[]}
+                scrollbar={{ draggable: true }}
+                spaceBetween={0}
+                slidesPerView={3}
+                loop="true"
+                breakpoints={{
+                  1920: {
+                    spaceBetween: 0,
+                    slidesPerView: 5,
+                  },
+                  1440: {
+                    spaceBetween: 0,
+                    slidesPerView: 5,
+                  },
+                  768: {
+                    spaceBetween: 0,
+                    slidesPerView: 3,
+                  },
+                  300: {
+                    spaceBetween: 0,
+                    slidesPerView: 1,
+                  },
+                }}
+              >
+                <SwiperSlide>
+                  <Link
+                    href={`/${lang}/shops`}
+                    className={styles.newSection_shopLink}
+                  >
+                    <div className={styles.newSection_shopLink_wrapper}>
+                      <img
+                        src="/media/pictures/brand-jil-sander.jpg"
+                        className={styles.newSection_SwiperImg}
+                        alt="women model"
+                      />
+                    </div>
+                    <h3 className={styles.newSection_title}>
+                      underwear brand 1
+                    </h3>
+                  </Link>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Link
+                    href={`/${lang}/shops`}
+                    className={styles.newSection_shopLink}
+                  >
+                    <div className={styles.newSection_shopLink_wrapper}>
+                      <img
+                        src="/media/pictures/brand-zara.jpg"
+                        className={styles.newSection_SwiperImg}
+                        alt="women model"
+                      />
+                    </div>
+                    <h3 className={styles.newSection_title}>
+                      underwear brand 2
+                    </h3>
+                  </Link>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Link
+                    href={`/${lang}/shops`}
+                    className={styles.newSection_shopLink}
+                  >
+                    <div className={styles.newSection_shopLink_wrapper}>
+                      <img
+                        src="/media/pictures/brand-karl-lagerfeld.jpg"
+                        className={styles.newSection_SwiperImg}
+                        alt="women model"
+                      />
+                    </div>
+                    <h3 className={styles.newSection_title}>
+                      underwear brand 3
+                    </h3>
+                  </Link>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Link
+                    href={`/${lang}/shops`}
+                    className={styles.newSection_shopLink}
+                  >
+                    <div className={styles.newSection_shopLink_wrapper}>
+                      <img
+                        src="/media/pictures/brand-jil-sander.jpg"
+                        className={styles.newSection_SwiperImg}
+                        alt="women model"
+                      />
+                    </div>
+                    <h3 className={styles.newSection_title}>
+                      underwear brand 4
+                    </h3>
+                  </Link>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Link
+                    href={`/${lang}/shops`}
+                    className={styles.newSection_shopLink}
+                  >
+                    <div className={styles.newSection_shopLink_wrapper}>
+                      <img
+                        src="/media/pictures/brand-zara.jpg"
+                        className={styles.newSection_SwiperImg}
+                        alt="women model"
+                      />
+                    </div>
+                    <h3 className={styles.newSection_title}>
+                      underwear brand 5
+                    </h3>
+                  </Link>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Link
+                    href={`/${lang}/shops`}
+                    className={styles.newSection_shopLink}
+                  >
+                    <div className={styles.newSection_shopLink_wrapper}>
+                      <img
+                        src="/media/pictures/brand-karl-lagerfeld.jpg"
+                        className={styles.newSection_SwiperImg}
+                        alt="women model"
+                      />
+                    </div>
+                    <h3 className={styles.newSection_title}>
+                      underwear brand 6
+                    </h3>
+                  </Link>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Link
+                    href={`/${lang}/shops`}
+                    className={styles.newSection_shopLink}
+                  >
+                    <div className={styles.newSection_shopLink_wrapper}>
+                      <img
+                        src="/media/pictures/brand-jil-sander.jpg"
+                        className={styles.newSection_SwiperImg}
+                        alt="women model"
+                      />
+                    </div>
+                    <h3 className={styles.newSection_title}>
+                      underwear brand 7
+                    </h3>
+                  </Link>
+                </SwiperSlide>
+              </Swiper>
+            </div>
+            <button
+              onClick={changeImg}
+              className={styles.newSection_SwiperNextBtn}
+            >
+              <img
+                className={styles.newSection_SwiperIconNext}
+                src="/media/icons/arrow-right.png"
+                alt="arrow"
+                width={24}
+                height={24}
+              />
+            </button>
+          </motion.div>
+        </AnimatePresence>
       )}
       {filter === 'sport' && (
-        <div className={styles.newSection_mainWrapper}>
-          <div className={styles.newSection_SwiperWrapper}>
-            <Swiper
-              onInit={ev => {
-                set_my_swiper(ev);
-              }}
-              ref={swiperRef}
-              modules={[]}
-              scrollbar={{ draggable: true }}
-              spaceBetween={0}
-              slidesPerView={3}
-              loop="true"
-              breakpoints={{
-                1920: {
-                  spaceBetween: 0,
-                  slidesPerView: 5,
-                },
-                1440: {
-                  spaceBetween: 0,
-                  slidesPerView: 5,
-                },
-                768: {
-                  spaceBetween: 0,
-                  slidesPerView: 3,
-                },
-                300: {
-                  spaceBetween: 0,
-                  slidesPerView: 1,
-                },
-              }}
-            >
-              <SwiperSlide>
-                <Link
-                  href={`/${lang}/shops`}
-                  className={styles.newSection_shopLink}
-                >
-                  <div className={styles.newSection_shopLink_wrapper}>
-                    <img
-                      src="/media/pictures/brand-jil-sander.jpg"
-                      className={styles.newSection_SwiperImg}
-                      alt="women model"
-                    />
-                  </div>
-                  <h3 className={styles.newSection_title}>sport brand 1</h3>
-                </Link>
-              </SwiperSlide>
-              <SwiperSlide>
-                <Link
-                  href={`/${lang}/shops`}
-                  className={styles.newSection_shopLink}
-                >
-                  <div className={styles.newSection_shopLink_wrapper}>
-                    <img
-                      src="/media/pictures/brand-zara.jpg"
-                      className={styles.newSection_SwiperImg}
-                      alt="women model"
-                    />
-                  </div>
-                  <h3 className={styles.newSection_title}>sport brand 2</h3>
-                </Link>
-              </SwiperSlide>
-              <SwiperSlide>
-                <Link
-                  href={`/${lang}/shops`}
-                  className={styles.newSection_shopLink}
-                >
-                  <div className={styles.newSection_shopLink_wrapper}>
-                    <img
-                      src="/media/pictures/brand-karl-lagerfeld.jpg"
-                      className={styles.newSection_SwiperImg}
-                      alt="women model"
-                    />
-                  </div>
-                  <h3 className={styles.newSection_title}>sport brand 3</h3>
-                </Link>
-              </SwiperSlide>
-              <SwiperSlide>
-                <Link
-                  href={`/${lang}/shops`}
-                  className={styles.newSection_shopLink}
-                >
-                  <div className={styles.newSection_shopLink_wrapper}>
-                    <img
-                      src="/media/pictures/brand-jil-sander.jpg"
-                      className={styles.newSection_SwiperImg}
-                      alt="women model"
-                    />
-                  </div>
-                  <h3 className={styles.newSection_title}>sport brand 4</h3>
-                </Link>
-              </SwiperSlide>
-              <SwiperSlide>
-                <Link
-                  href={`/${lang}/shops`}
-                  className={styles.newSection_shopLink}
-                >
-                  <div className={styles.newSection_shopLink_wrapper}>
-                    <img
-                      src="/media/pictures/brand-zara.jpg"
-                      className={styles.newSection_SwiperImg}
-                      alt="women model"
-                    />
-                  </div>
-                  <h3 className={styles.newSection_title}>sport brand 5</h3>
-                </Link>
-              </SwiperSlide>
-              <SwiperSlide>
-                <Link
-                  href={`/${lang}/shops`}
-                  className={styles.newSection_shopLink}
-                >
-                  <div className={styles.newSection_shopLink_wrapper}>
-                    <img
-                      src="/media/pictures/brand-karl-lagerfeld.jpg"
-                      className={styles.newSection_SwiperImg}
-                      alt="women model"
-                    />
-                  </div>
-                  <h3 className={styles.newSection_title}>sport brand 6</h3>
-                </Link>
-              </SwiperSlide>
-              <SwiperSlide>
-                <Link
-                  href={`/${lang}/shops`}
-                  className={styles.newSection_shopLink}
-                >
-                  <div className={styles.newSection_shopLink_wrapper}>
-                    <img
-                      src="/media/pictures/brand-jil-sander.jpg"
-                      className={styles.newSection_SwiperImg}
-                      alt="women model"
-                    />
-                  </div>
-                  <h3 className={styles.newSection_title}>sport brand 7</h3>
-                </Link>
-              </SwiperSlide>
-            </Swiper>
-          </div>
-          <button
-            onClick={changeImg}
-            className={styles.newSection_SwiperNextBtn}
+        <AnimatePresence>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              ease: 'linear',
+              duration: 0.4,
+            }}
+            exit={{ opacity: 0 }}
+            className={styles.newSection_mainWrapper}
           >
-            <img
-              className={styles.newSection_SwiperIconNext}
-              src="/media/icons/arrow-right.png"
-              alt="arrow"
-              width={24}
-              height={24}
-            />
-          </button>
-        </div>
+            <div className={styles.newSection_SwiperWrapper}>
+              <Swiper
+                onInit={ev => {
+                  set_my_swiper(ev);
+                }}
+                ref={swiperRef}
+                modules={[]}
+                scrollbar={{ draggable: true }}
+                spaceBetween={0}
+                slidesPerView={3}
+                loop="true"
+                breakpoints={{
+                  1920: {
+                    spaceBetween: 0,
+                    slidesPerView: 5,
+                  },
+                  1440: {
+                    spaceBetween: 0,
+                    slidesPerView: 5,
+                  },
+                  768: {
+                    spaceBetween: 0,
+                    slidesPerView: 3,
+                  },
+                  300: {
+                    spaceBetween: 0,
+                    slidesPerView: 1,
+                  },
+                }}
+              >
+                <SwiperSlide>
+                  <Link
+                    href={`/${lang}/shops`}
+                    className={styles.newSection_shopLink}
+                  >
+                    <div className={styles.newSection_shopLink_wrapper}>
+                      <img
+                        src="/media/pictures/brand-jil-sander.jpg"
+                        className={styles.newSection_SwiperImg}
+                        alt="women model"
+                      />
+                    </div>
+                    <h3 className={styles.newSection_title}>sport brand 1</h3>
+                  </Link>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Link
+                    href={`/${lang}/shops`}
+                    className={styles.newSection_shopLink}
+                  >
+                    <div className={styles.newSection_shopLink_wrapper}>
+                      <img
+                        src="/media/pictures/brand-zara.jpg"
+                        className={styles.newSection_SwiperImg}
+                        alt="women model"
+                      />
+                    </div>
+                    <h3 className={styles.newSection_title}>sport brand 2</h3>
+                  </Link>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Link
+                    href={`/${lang}/shops`}
+                    className={styles.newSection_shopLink}
+                  >
+                    <div className={styles.newSection_shopLink_wrapper}>
+                      <img
+                        src="/media/pictures/brand-karl-lagerfeld.jpg"
+                        className={styles.newSection_SwiperImg}
+                        alt="women model"
+                      />
+                    </div>
+                    <h3 className={styles.newSection_title}>sport brand 3</h3>
+                  </Link>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Link
+                    href={`/${lang}/shops`}
+                    className={styles.newSection_shopLink}
+                  >
+                    <div className={styles.newSection_shopLink_wrapper}>
+                      <img
+                        src="/media/pictures/brand-jil-sander.jpg"
+                        className={styles.newSection_SwiperImg}
+                        alt="women model"
+                      />
+                    </div>
+                    <h3 className={styles.newSection_title}>sport brand 4</h3>
+                  </Link>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Link
+                    href={`/${lang}/shops`}
+                    className={styles.newSection_shopLink}
+                  >
+                    <div className={styles.newSection_shopLink_wrapper}>
+                      <img
+                        src="/media/pictures/brand-zara.jpg"
+                        className={styles.newSection_SwiperImg}
+                        alt="women model"
+                      />
+                    </div>
+                    <h3 className={styles.newSection_title}>sport brand 5</h3>
+                  </Link>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Link
+                    href={`/${lang}/shops`}
+                    className={styles.newSection_shopLink}
+                  >
+                    <div className={styles.newSection_shopLink_wrapper}>
+                      <img
+                        src="/media/pictures/brand-karl-lagerfeld.jpg"
+                        className={styles.newSection_SwiperImg}
+                        alt="women model"
+                      />
+                    </div>
+                    <h3 className={styles.newSection_title}>sport brand 6</h3>
+                  </Link>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Link
+                    href={`/${lang}/shops`}
+                    className={styles.newSection_shopLink}
+                  >
+                    <div className={styles.newSection_shopLink_wrapper}>
+                      <img
+                        src="/media/pictures/brand-jil-sander.jpg"
+                        className={styles.newSection_SwiperImg}
+                        alt="women model"
+                      />
+                    </div>
+                    <h3 className={styles.newSection_title}>sport brand 7</h3>
+                  </Link>
+                </SwiperSlide>
+              </Swiper>
+            </div>
+            <button
+              onClick={changeImg}
+              className={styles.newSection_SwiperNextBtn}
+            >
+              <img
+                className={styles.newSection_SwiperIconNext}
+                src="/media/icons/arrow-right.png"
+                alt="arrow"
+                width={24}
+                height={24}
+              />
+            </button>
+          </motion.div>
+        </AnimatePresence>
       )}
       {filter === 'bags' && (
-        <div className={styles.newSection_mainWrapper}>
-          <div className={styles.newSection_SwiperWrapper}>
-            <Swiper
-              onInit={ev => {
-                set_my_swiper(ev);
-              }}
-              ref={swiperRef}
-              modules={[]}
-              scrollbar={{ draggable: true }}
-              spaceBetween={0}
-              slidesPerView={3}
-              loop="true"
-              breakpoints={{
-                1920: {
-                  spaceBetween: 0,
-                  slidesPerView: 5,
-                },
-                1440: {
-                  spaceBetween: 0,
-                  slidesPerView: 5,
-                },
-                768: {
-                  spaceBetween: 0,
-                  slidesPerView: 3,
-                },
-                300: {
-                  spaceBetween: 0,
-                  slidesPerView: 1,
-                },
-              }}
-            >
-              <SwiperSlide>
-                <Link
-                  href={`/${lang}/shops`}
-                  className={styles.newSection_shopLink}
-                >
-                  <div className={styles.newSection_shopLink_wrapper}>
-                    <img
-                      src="/media/pictures/brand-jil-sander.jpg"
-                      className={styles.newSection_SwiperImg}
-                      alt="women model"
-                    />
-                  </div>
-                  <h3 className={styles.newSection_title}>bags brand 1</h3>
-                </Link>
-              </SwiperSlide>
-              <SwiperSlide>
-                <Link
-                  href={`/${lang}/shops`}
-                  className={styles.newSection_shopLink}
-                >
-                  <div className={styles.newSection_shopLink_wrapper}>
-                    <img
-                      src="/media/pictures/brand-zara.jpg"
-                      className={styles.newSection_SwiperImg}
-                      alt="women model"
-                    />
-                  </div>
-                  <h3 className={styles.newSection_title}>bags brand 2</h3>
-                </Link>
-              </SwiperSlide>
-              <SwiperSlide>
-                <Link
-                  href={`/${lang}/shops`}
-                  className={styles.newSection_shopLink}
-                >
-                  <div className={styles.newSection_shopLink_wrapper}>
-                    <img
-                      src="/media/pictures/brand-karl-lagerfeld.jpg"
-                      className={styles.newSection_SwiperImg}
-                      alt="women model"
-                    />
-                  </div>
-                  <h3 className={styles.newSection_title}>bags brand 3</h3>
-                </Link>
-              </SwiperSlide>
-              <SwiperSlide>
-                <Link
-                  href={`/${lang}/shops`}
-                  className={styles.newSection_shopLink}
-                >
-                  <div className={styles.newSection_shopLink_wrapper}>
-                    <img
-                      src="/media/pictures/brand-jil-sander.jpg"
-                      className={styles.newSection_SwiperImg}
-                      alt="women model"
-                    />
-                  </div>
-                  <h3 className={styles.newSection_title}>bags brand 4</h3>
-                </Link>
-              </SwiperSlide>
-              <SwiperSlide>
-                <Link
-                  href={`/${lang}/shops`}
-                  className={styles.newSection_shopLink}
-                >
-                  <div className={styles.newSection_shopLink_wrapper}>
-                    <img
-                      src="/media/pictures/brand-zara.jpg"
-                      className={styles.newSection_SwiperImg}
-                      alt="women model"
-                    />
-                  </div>
-                  <h3 className={styles.newSection_title}>bags brand 5</h3>
-                </Link>
-              </SwiperSlide>
-              <SwiperSlide>
-                <Link
-                  href={`/${lang}/shops`}
-                  className={styles.newSection_shopLink}
-                >
-                  <div className={styles.newSection_shopLink_wrapper}>
-                    <img
-                      src="/media/pictures/brand-karl-lagerfeld.jpg"
-                      className={styles.newSection_SwiperImg}
-                      alt="women model"
-                    />
-                  </div>
-                  <h3 className={styles.newSection_title}>bags brand 6</h3>
-                </Link>
-              </SwiperSlide>
-              <SwiperSlide>
-                <Link
-                  href={`/${lang}/shops`}
-                  className={styles.newSection_shopLink}
-                >
-                  <div className={styles.newSection_shopLink_wrapper}>
-                    <img
-                      src="/media/pictures/brand-jil-sander.jpg"
-                      className={styles.newSection_SwiperImg}
-                      alt="women model"
-                    />
-                  </div>
-                  <h3 className={styles.newSection_title}>bags brand 7</h3>
-                </Link>
-              </SwiperSlide>
-            </Swiper>
-          </div>
-          <button
-            onClick={changeImg}
-            className={styles.newSection_SwiperNextBtn}
+        <AnimatePresence>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              ease: 'linear',
+              duration: 0.4,
+            }}
+            exit={{ opacity: 0 }}
+            className={styles.newSection_mainWrapper}
           >
-            <img
-              className={styles.newSection_SwiperIconNext}
-              src="/media/icons/arrow-right.png"
-              alt="arrow"
-              width={24}
-              height={24}
-            />
-          </button>
-        </div>
+            <div className={styles.newSection_SwiperWrapper}>
+              <Swiper
+                onInit={ev => {
+                  set_my_swiper(ev);
+                }}
+                ref={swiperRef}
+                modules={[]}
+                scrollbar={{ draggable: true }}
+                spaceBetween={0}
+                slidesPerView={3}
+                loop="true"
+                breakpoints={{
+                  1920: {
+                    spaceBetween: 0,
+                    slidesPerView: 5,
+                  },
+                  1440: {
+                    spaceBetween: 0,
+                    slidesPerView: 5,
+                  },
+                  768: {
+                    spaceBetween: 0,
+                    slidesPerView: 3,
+                  },
+                  300: {
+                    spaceBetween: 0,
+                    slidesPerView: 1,
+                  },
+                }}
+              >
+                <SwiperSlide>
+                  <Link
+                    href={`/${lang}/shops`}
+                    className={styles.newSection_shopLink}
+                  >
+                    <div className={styles.newSection_shopLink_wrapper}>
+                      <img
+                        src="/media/pictures/brand-jil-sander.jpg"
+                        className={styles.newSection_SwiperImg}
+                        alt="women model"
+                      />
+                    </div>
+                    <h3 className={styles.newSection_title}>bags brand 1</h3>
+                  </Link>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Link
+                    href={`/${lang}/shops`}
+                    className={styles.newSection_shopLink}
+                  >
+                    <div className={styles.newSection_shopLink_wrapper}>
+                      <img
+                        src="/media/pictures/brand-zara.jpg"
+                        className={styles.newSection_SwiperImg}
+                        alt="women model"
+                      />
+                    </div>
+                    <h3 className={styles.newSection_title}>bags brand 2</h3>
+                  </Link>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Link
+                    href={`/${lang}/shops`}
+                    className={styles.newSection_shopLink}
+                  >
+                    <div className={styles.newSection_shopLink_wrapper}>
+                      <img
+                        src="/media/pictures/brand-karl-lagerfeld.jpg"
+                        className={styles.newSection_SwiperImg}
+                        alt="women model"
+                      />
+                    </div>
+                    <h3 className={styles.newSection_title}>bags brand 3</h3>
+                  </Link>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Link
+                    href={`/${lang}/shops`}
+                    className={styles.newSection_shopLink}
+                  >
+                    <div className={styles.newSection_shopLink_wrapper}>
+                      <img
+                        src="/media/pictures/brand-jil-sander.jpg"
+                        className={styles.newSection_SwiperImg}
+                        alt="women model"
+                      />
+                    </div>
+                    <h3 className={styles.newSection_title}>bags brand 4</h3>
+                  </Link>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Link
+                    href={`/${lang}/shops`}
+                    className={styles.newSection_shopLink}
+                  >
+                    <div className={styles.newSection_shopLink_wrapper}>
+                      <img
+                        src="/media/pictures/brand-zara.jpg"
+                        className={styles.newSection_SwiperImg}
+                        alt="women model"
+                      />
+                    </div>
+                    <h3 className={styles.newSection_title}>bags brand 5</h3>
+                  </Link>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Link
+                    href={`/${lang}/shops`}
+                    className={styles.newSection_shopLink}
+                  >
+                    <div className={styles.newSection_shopLink_wrapper}>
+                      <img
+                        src="/media/pictures/brand-karl-lagerfeld.jpg"
+                        className={styles.newSection_SwiperImg}
+                        alt="women model"
+                      />
+                    </div>
+                    <h3 className={styles.newSection_title}>bags brand 6</h3>
+                  </Link>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Link
+                    href={`/${lang}/shops`}
+                    className={styles.newSection_shopLink}
+                  >
+                    <div className={styles.newSection_shopLink_wrapper}>
+                      <img
+                        src="/media/pictures/brand-jil-sander.jpg"
+                        className={styles.newSection_SwiperImg}
+                        alt="women model"
+                      />
+                    </div>
+                    <h3 className={styles.newSection_title}>bags brand 7</h3>
+                  </Link>
+                </SwiperSlide>
+              </Swiper>
+            </div>
+            <button
+              onClick={changeImg}
+              className={styles.newSection_SwiperNextBtn}
+            >
+              <img
+                className={styles.newSection_SwiperIconNext}
+                src="/media/icons/arrow-right.png"
+                alt="arrow"
+                width={24}
+                height={24}
+              />
+            </button>
+          </motion.div>
+        </AnimatePresence>
       )}
     </div>
   );

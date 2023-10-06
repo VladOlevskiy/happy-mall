@@ -10,6 +10,8 @@ import { useState } from 'react';
 import MobileMenu from './MobileMenu';
 import { usePathname } from 'next/navigation';
 import { useRouter } from 'next/navigation';
+import { motion } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 
 const NavBar = ({ lang, dict }) => {
   const router = useRouter();
@@ -48,7 +50,9 @@ const NavBar = ({ lang, dict }) => {
       <div className={containerStyle.container}>
         <div className={styles.mainWrapper}>
           {showMobMenu && (
-            <MobileMenu setShow={setShowMobMenu} dict={dict} lang={lang} />
+            <AnimatePresence>
+              <MobileMenu setShow={setShowMobMenu} dict={dict} lang={lang} />
+            </AnimatePresence>
           )}
           <Logo lang={lang} />
           <NavigationList dict={dict} lang={lang} cl={styles.bigScreen} />
