@@ -39,11 +39,11 @@ export const New = ({ lang, dict }) => {
               <img
                 className={styles.newSection_menuItem_arrow}
                 src="/media/icons/arrow-bottom.png"
-                // style={
-                //   filter === 'fashion' && show
-                //     ? { transform: 'rotate(-90deg)' }
-                //     : { transform: 'rotate(0deg)' }
-                // }
+                style={
+                  filter === 'fashion' && show
+                    ? { transform: 'rotate(-90deg)' }
+                    : { transform: 'rotate(0deg)' }
+                }
                 alt="arrow"
                 width={24}
                 height={24}
