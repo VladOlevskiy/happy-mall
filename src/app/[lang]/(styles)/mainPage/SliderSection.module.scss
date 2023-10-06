@@ -8,7 +8,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   color: $basics-light-color;
-  padding-bottom: 200px;
+  padding-bottom: 100px;
   &_titleWrapper {
     display: flex;
     flex-direction: column;
@@ -136,7 +136,7 @@
     }
   }
   &_swiper {
-    overflow: inherit;
+    overflow: visible;
   }
   &_swiper_swiperSlide_wrapperImg {
     display: flex;
@@ -160,9 +160,9 @@
   }
 }
 
-.sliderSection_sliderWrapper {
-  overflow-x: clip;
-}
+// .sliderSection_sliderWrapper {
+//   overflow-x: clip;
+// }
 
 .sliderSection_swiper {
   perspective: none;
@@ -280,4 +280,7 @@
   width: 84%;
   height: 1px;
   background-color: $accent-GoldenDark-color;
+}
+.sliderSection_sliderWrapper {
+  padding-bottom: 200px;
 }
