@@ -59,7 +59,7 @@
   padding: 20px;
 }
 
-.aaaa {
+.bullet {
   background-color: $basics-light-color !important;
   height: 8px;
   width: 8px;
@@ -76,10 +76,10 @@
     width: 12px;
   }
 }
-.bbbb {
+.bullet_act {
   background-color: $basics-dark-color !important;
 }
-div:has(> .aaaa) {
+div:has(> .bullet) {
   display: flex;
   justify-content: center;
   padding-bottom: 24px;

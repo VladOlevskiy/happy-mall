@@ -14,8 +14,8 @@ export const Hero = ({ dict }) => {
       <Swiper
         modules={[Pagination, Autoplay]}
         pagination={{
-          bulletClass: `${styles.aaaa}`,
-          bulletActiveClass: `${styles.bbbb}`,
+          bulletClass: `${styles.bullet}`,
+          bulletActiveClass: `${styles.bullet_act}`,
           clickable: true,
         }}
         spaceBetween={50}
