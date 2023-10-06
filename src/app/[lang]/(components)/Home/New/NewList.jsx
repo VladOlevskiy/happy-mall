@@ -25,10 +25,10 @@ const NewList = ({ dic, lang }) => {
             <button
               className={styles.NavList_button}
               onClick={() => handleFilter('clothes')}
-              // style={{
-              //   backgroundColor:
-              //     filter === 'clothes' ? '#C6A687' : 'transparent',
-              // }}
+              style={{
+                backgroundColor:
+                  filter === 'clothes' ? '#C6A687' : 'transparent',
+              }}
             >
               {dic.mainPage.new.subMenu.clothes}
             </button>
@@ -37,10 +37,10 @@ const NewList = ({ dic, lang }) => {
             <button
               className={styles.NavList_button}
               onClick={() => handleFilter('babyCloth')}
-              // style={{
-              //   backgroundColor:
-              //     filter === 'babyCloth' ? '#C6A687' : 'transparent',
-              // }}
+              style={{
+                backgroundColor:
+                  filter === 'babyCloth' ? '#C6A687' : 'transparent',
+              }}
             >
               {dic.mainPage.new.subMenu.babyCloth}
             </button>
@@ -49,9 +49,9 @@ const NewList = ({ dic, lang }) => {
             <button
               className={styles.NavList_button}
               onClick={() => handleFilter('shoes')}
-              // style={{
-              //   backgroundColor: filter === 'shoes' ? '#C6A687' : 'transparent',
-              // }}
+              style={{
+                backgroundColor: filter === 'shoes' ? '#C6A687' : 'transparent',
+              }}
             >
               {dic.mainPage.new.subMenu.shoes}
             </button>
@@ -60,10 +60,10 @@ const NewList = ({ dic, lang }) => {
             <button
               className={styles.NavList_button}
               onClick={() => handleFilter('babyShoes')}
-              // style={{
-              //   backgroundColor:
-              //     filter === 'babyShoes' ? '#C6A687' : 'transparent',
-              // }}
+              style={{
+                backgroundColor:
+                  filter === 'babyShoes' ? '#C6A687' : 'transparent',
+              }}
             >
               {dic.mainPage.new.subMenu.babyShoes}
             </button>
@@ -72,10 +72,10 @@ const NewList = ({ dic, lang }) => {
             <button
               className={styles.NavList_button}
               onClick={() => handleFilter('underwear')}
-              // style={{
-              //   backgroundColor:
-              //     filter === 'underwear' ? '#C6A687' : 'transparent',
-              // }}
+              style={{
+                backgroundColor:
+                  filter === 'underwear' ? '#C6A687' : 'transparent',
+              }}
             >
               {dic.mainPage.new.subMenu.underwear}
             </button>
@@ -84,9 +84,9 @@ const NewList = ({ dic, lang }) => {
             <button
               className={styles.NavList_button}
               onClick={() => handleFilter('sport')}
-              // style={{
-              //   backgroundColor: filter === 'sport' ? '#C6A687' : 'transparent',
-              // }}
+              style={{
+                backgroundColor: filter === 'sport' ? '#C6A687' : 'transparent',
+              }}
             >
               {dic.mainPage.new.subMenu.sport}
             </button>
@@ -95,9 +95,9 @@ const NewList = ({ dic, lang }) => {
             <button
               className={styles.NavList_button}
               onClick={() => handleFilter('bags')}
-              // style={{
-              //   backgroundColor: filter === 'bags' ? '#C6A687' : 'transparent',
-              // }}
+              style={{
+                backgroundColor: filter === 'bags' ? '#C6A687' : 'transparent',
+              }}
             >
               {dic.mainPage.new.subMenu.bags}
             </button>
